@@ -19,6 +19,7 @@ const server = createServer(app);
 const io = new Server(server, {
     cors: {
         origin: "https://grp-messenger-client.vercel.app",
+        methods: ["GET", "POST"],
         credentials: true,
     }
 })
