@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+}
+body{
+  max-width: 1600px;
+  background-color: #252329;
+  margin:  0 auto;
+  overflow-x: hidden;
+}
+.some{
+  background-color: #fcba03;
+}
+
+::-webkit-scrollbar {
+  /* Customize the scrollbar width */
+  background-color: transparent; 
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* Customize the scrollbar track */
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  /* Customize the scrollbar thumb */
+  background: #555555;
+  border-radius: 25px; 
+}
