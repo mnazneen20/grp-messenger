@@ -29,7 +29,9 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-
+app.get('/', (req, res) => {
+    res.status(200).json({ msg: "hello world, this is grp-messenger server" })
+})
 // application user routes:
 app.use('/api', userRouter);
 // chat room routes:
