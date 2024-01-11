@@ -23,7 +23,7 @@ app.use(cors({
 
 const io = new Server(server, {
     cors: {
-        origin: true,
+        origin: "https://grp-messenger-client.vercel.app",
         methods: ["GET", "POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true,
