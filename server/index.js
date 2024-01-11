@@ -8,28 +8,29 @@ import cookieParser from 'cookie-parser';
 import { Server } from 'socket.io'
 import userRouter from './services/user/user.js';
 import chatroomRouter from './services/chatrooms/chats.js';
-import jwt from 'jsonwebtoken'
-import User from './services/user/userSchema.js';
 import Message from './services/messages/msgSchema.js'
 
 dotenv.config();
 const PORT = 4000;
 const app = express();
 const server = createServer(app);
-const io = new Server(server, {
-    cors: {
-        origin: "https://grp-messenger-client.vercel.app",
-        methods: ["GET", "POST"],
-        allowedHeaders: ["my-custom-header"],
-        credentials: true
-    }
-})
 
 app.use(cors({
     origin: "https://grp-messenger-client.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
 }));
+
+const io = new Server(server, {
+    cors: {
+        origin: true,
+        methods: ["GET", "POST"],
+        allowedHeaders: ["my-custom-header"],
+        credentials: true,
+    },
+    allowEIO3: true,
+})
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.get('/', (req, res) => {
