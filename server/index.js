@@ -20,13 +20,14 @@ const io = new Server(server, {
     cors: {
         origin: "https://grp-messenger-client.vercel.app",
         methods: ["GET", "POST"],
-        credentials: true,
-    },
-    allowEIO3: true,
+        allowedHeaders: ["my-custom-header"],
+        credentials: true
+    }
 })
 
 app.use(cors({
     origin: "https://grp-messenger-client.vercel.app",
+    methods: ["GET", "POST"],
     credentials: true,
 }));
 app.use(bodyParser.json());

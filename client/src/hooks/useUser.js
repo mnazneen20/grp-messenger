@@ -7,6 +7,7 @@ export default function useUser() {
 
     const me = () => {
         fetch(`${import.meta.env.VITE_BACKEND_URL}/api/me`, {
+            method: "GET",
             credentials: "include",
         })
             .then((res) => res.json())
@@ -45,4 +46,7 @@ export default function useUser() {
 
 export const socket = io(`${import.meta.env.VITE_BACKEND_URL}`, {
     withCredentials: true,
+    extraHeaders: {
+        "my-custom-header": "abcd"
+    }
 })

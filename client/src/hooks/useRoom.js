@@ -11,7 +11,10 @@ export default function useRoom() {
     );
 
     const getRooms = () => {
-        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/rooms`)
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/rooms`, {
+            credentials: 'include',
+            method: "GET"
+        })
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
