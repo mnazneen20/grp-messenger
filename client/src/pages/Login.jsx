@@ -4,7 +4,7 @@ import { ChatCircleDots, EnvelopeSimple, Lock } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { useGlobalCtx } from '../context/GlobalProvider';
 import { useNavigate } from 'react-router-dom';
-import DemoBtn from '../components/Demobtn';
+import DemoBtn from '../components/DemoBtn.jsx';
 
 export default function Login() {
     const [disable, setDisable] = useState(false);
