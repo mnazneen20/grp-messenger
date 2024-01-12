@@ -1,5 +1,7 @@
 # MERN Group Chat App with Socket.io
 
+[Live site](https://grp-messenger-client.vercel.app/)
+
 **Description**
 
 This is a real-time group chat application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Socket.io for enabling real-time communication between clients. The application allows users to join chat rooms, exchange messages, and see updates in real-time.
