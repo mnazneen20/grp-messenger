@@ -16,14 +16,14 @@ const app = express();
 const server = createServer(app);
 
 app.use(cors({
-    origin: "http://localhost:5173", //"https://grp-messenger-client.vercel.app",
+    origin: "https://grp-messenger-client.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
 }));
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", //"https://grp-messenger-client.vercel.app",
+        origin: "https://grp-messenger-client.vercel.app",
         methods: ["GET", "POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true,
